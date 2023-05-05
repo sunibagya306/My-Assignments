@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+<parameter name="url" value="https://dev98568.service-now.com/"/>
+<parameter name="username" value="admin"/>
+<parameter name="password" value="7J*e9*yjLnCX"/>
+<parameter name="updateIncidentNumber" value="INC0010024"/>
+
+  <test thread-count="3" name="Test" verbose="5">
+    <classes>
+     <class name="servicenow.FillMandatoryFields"/>
+      <class name="servicenow.CreateNewProposal"/>
+      <class name="servicenow.CreateNewCaller"/> 
+      <class name="servicenow.CreateNewIncident"/>
+      <class name="servicenow.UpdateExistingIncident"/>
+      <class name="servicenow.DeleteTheIncident"/> 
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
